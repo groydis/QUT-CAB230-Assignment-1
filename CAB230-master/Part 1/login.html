@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Font Awesome Icons -->
+		<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+		<!-- Style Sheet -->
+		<link href="css/design.css" rel="stylesheet" type="text/css"/>
+		<script src="scripts/loginscript.js"></script>
+		<!-- Webpage Title -->
+		<title>BNE Wi-Fi Reviews - Login</title>
+	</head>
+	<body>
+		<!-- Container for entire page -->
+		<!-- Navigation Bar -->
+		<div id="navigation">
+			<a href="index.html" class="bar-title"><b>BNE</b> Wi-Fi Reviews</a>
+			<div class="right">
+				<ul>
+					<li>
+						<a href="search.html"> <i class="fas fa-search"></i> Search </a>
+					</li>
+					<li>
+						<a href="signUp.html"> <i class="fas fa-user"></i> Register </a>
+					</li>
+					<li>
+						<a href="login.html"> <i class="fas fa-sign-in-alt"></i> Login </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="body_content">
+			<div class="content">
+				<div class="header">
+					<h1 id="static_title">Login</h1>
+				</div>
+				<!--Login Table Incased in Form Tags-->
+				<form name="login" id="login_table">
+					<!--Username or Email Address to be Entered to be Checked and Validated-->
+					<div id="login_user_email">
+						<label for="user_email">Username or Email Address:</label>
+						<input type="text" name="user_email" id="user_email" placeholder="Username or Email Address" onfocus="return undoUsernameError()" onblur="return checkUsername()">
+						<!--Error Message for Username or Email Address-->
+						<div class="error_message" id="user_email_error"></div>
+					</div>
+					<!--Password to be Entered to be Checked and Validated-->
+					<div id="login_password">
+						<label for="password_verify">Password:</label>
+						<input type="password" name="password_verify" id="password_verify" placeholder="Password" onfocus="return undoPasswordError()" onblur="return checkPassword()">
+						<!--Error Message for Password-->
+						<div class="error_message" id="verify_password_error"></div>
+					</div>
+					<!--Buttons for the Login Page-->
+					<div class="sign_up_and_login_buttons">
+						<!--Submit Login Details for Checking of Validity-->
+						<input type="button" id="button" name="login" value="Login" onclick="return validateLoginForm()">
+						<p>Not Signed Up Yet?</p>
+						<!--Alex did this-->
+						<!--Button to go To Sign Up Page if the Person is not Signed Up-->
+						<input type="button" id="button" name="go_to_sign_up" value="Register"  onclick="window.location.href='signUp.html'">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="footer">
+			<p>Made By Greyden Scott, Alex Holm & Sean O'Connell</p>
+		</div>
+	</body>
+</html>

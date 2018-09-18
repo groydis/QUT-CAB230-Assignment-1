@@ -1,0 +1,487 @@
+/* MAIN DISPLAY CSS
+Set up default css structure for html and body
+Margin and padding set to 0
+sets the height to use 100% of screen space
+Sets font to helvetica through out the page
+sets background color
+sets display type to flex and direction of column*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction:column;
+}
+
+/* Sets flex shrink to 0*/
+body > * {
+  flex-shrink: 0;
+}
+/*NAVIGATION BAR CSS
+sets the z index to 1 to ensure always on top
+sets overly to hidden and position to stick
+sets the positon to the very top at 0
+sets default padding left and right to 20px
+sets background color and text color
+adds a box shadow to the bottom of the navigation bar*/
+#navigation {
+  z-index: 1;
+  overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: black;
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, .5);
+}
+/* Handles the appearance of navigation bar links */
+#navigation a {
+  color: white;
+  height: auto;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+  background-color: black;
+}
+
+/* Handles the appearance of navigation bar links when being hovered over */
+#navigation a:hover {
+  background-color: white;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+/* This if for the website title that appears on the left hand side of the navigation bar*/
+.bar-title {
+  display: block;
+  float: left;
+  vertical-align: middle;
+  text-align: center;
+  padding: 14px 16px;
+}
+/* This if for the website links that appears on the right hand side of the navigation bar*/
+.right {
+  display: block;
+  float: right;
+  vertical-align: middle;
+  text-align: center;
+}
+/* This if for the website links that appears on the right hand side of the navigation bar*/
+.right ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/* This if for the website links that appears on the right hand side of the navigation bar*/
+.right li {
+  float: left;
+}
+
+/* This if for the website links that appears on the right hand side of the navigation bar*/
+.right li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* This if for the website links that appears on the right hand side of the navigation bar*/
+.right li a:hover {
+
+}
+
+/* CSS for the main content container for different page content, sets a standard text-align of center and sets the flex grow to 1
+which properly places the footer at the bottom of the page*/
+#body_content {
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction:column;
+}
+/*CSS for main content within the body content sets teh paage with to min of 400 and max of 1000*/
+.content {
+  height: 100%;
+  position: relative;
+  min-width: 400px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  display: inline-block;
+  background-color: white;
+  flex-grow: 1;
+}
+/* CSS For paging heading which sits within the content div */
+.content h1 {
+  margin-left: 10px;
+}
+/* Only used on image */
+.content #image {
+  float: left;
+  margin-left: 10px;
+  border: 2px solid black;
+  margin-right: 10px;
+}
+/* Default font size for paragraphs within content */
+.content p {
+  font-size: 1.5em;
+}
+/* CSS for header section within content */
+.header {
+  white-space: nowrap;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  align-content: center;
+  min-width: 400px;
+  max-width: 1000px;
+}
+/* css for image in the header */
+.header img {
+  min-width: 400px;
+  max-width: 1000px;
+}
+
+/* css for text in header, only used on index.html */
+.header h1 {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 3em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-width: 400px;
+  max-width: 1000px;
+}
+
+/* Footer CSS */
+#footer {
+  position: relative;
+  padding-top: 10px;
+  width: 100%;
+  height: 60px;   /* Height of the footer */
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+/* when used cetners content direclty in center of div, used only for index.html header title*/
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+/* CUSTOM CSS GOES BELOW */
+
+/* SEARCH RESULT CSS */
+/*Header CSS for seach result*/
+
+.header #static_title {
+  color: black;
+  background-color: white;
+}
+/* Search result content within .content */
+#search_results {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px;
+  padding-bottom: 100px;
+}
+#search_results a {
+  text-decoration: none;
+}
+/* container for the individual results that appear */
+.search_result_block {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 15px;
+  display: inline-block;
+  border: 1px solid black;
+  width: 250px;
+}
+/* image size within the result block */
+.search_result_block img {
+  width: 250px;
+  height: 250px;
+}
+
+/* where the name appears in the search result block */
+.search_result_block_hot_spot_name {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.search_result_block_hot_spot_name p {
+  font-size: 80%;
+}
+/* where the address appears in the search result block */
+.search_result_block_address {
+  position: absolute;
+  bottom: 0;
+  width: 250px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.search_result_block_address p {
+  font-size: 80%;
+}
+/* Handles the box shadow when hovering over the search result block */
+.search_result_block:hover {
+  box-shadow: 5px 5px 5px #888888;
+}
+
+/*LOGIN AND SIGN UP PAGE*/
+/*The forms of login and sign up
+  have these values for design*/
+#login_table,
+#input_table {
+  position: relative;
+  margin: auto;
+  width: 40%;
+  padding-top: 10px;
+}
+
+/*This div keeps the
+  first name info on the left
+  of the form*/
+#first_name_div {
+  float: left;
+  text-align: left;
+  width: 49%;
+}
+
+/*This div keeps the
+  last name info on the right
+  of the form*/
+#last_name_div {
+  float: right;
+  text-align: left;
+  width: 49%;
+}
+
+/*This design prevents the
+  username label from moving
+  to the right when there is an
+  error with the first name*/
+#user_label {
+  padding: 0 100% 0 5px;
+}
+
+/*This design keeps the label
+  inside the below input boxes*/
+label {
+  padding-left: 5px;
+}
+
+/*This is all the styling of
+  the input boxes for sign up
+  and login*/
+input[type=text],
+     [type=email],
+     [type=date],
+     [type=password]{
+        padding: 15px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        width: 100%;
+}
+
+/*When the input box is clicked on
+  the border goes black and the
+  outline is removed*/
+input[type=text]:focus,
+     [type=email]:focus,
+     [type=date]:focus,
+     [type=password]:focus{
+      outline: none;
+      border: 1px solid black;
+}
+
+/*Buttons at the bottom of login
+  and sign up pages are centred
+  for aesthetic purposes*/
+.sign_up_and_login_buttons{
+  text-align: center;
+}
+
+/*The error message has padding
+  values on the bottom and right
+  of the div*/
+.error_message {
+  padding: 0 0 10px 5px;
+}
+
+/*The actual text is made red
+  and the sized is altered*/
+.error_message i {
+  font-size: .8em;
+  color: red;
+}
+
+/*RESULTS PAGE - DO NOT TOUCH*/
+/*The map on the results page is
+  sized and altered on change of
+  the browser*/
+#results_map {
+  min-width: 350px;
+  max-width: 80%;
+  height: 350px;
+  padding: 10px;
+  background-color: grey;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*This styling allows the page
+  to be centred with roughly 10%
+  on either side of the divs*/
+.individual_result,
+.result_reviews {
+  width: 80%;
+  margin: auto;
+}
+
+/*Each review has this styling
+  with each block of information*/
+.curr_review_block {
+  padding: 0 5px;
+  margin: 10px auto;
+  border: 1px solid;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+/*The title suggesting to enter your
+  own review of the wifi hotspot*/
+#enter_review h2 {
+  padding-left: 5px;
+}
+
+/*Keeps the address and the username
+  inline with the other information
+  next to it*/
+#result_address,
+.review_result_username {
+  display: inline-block;
+}
+
+/*The styling of the username, who
+  entered this review*/
+.review_result_username p {
+  font-size: 90%;
+  font-weight: bold;
+}
+
+/*The overall star rating of the
+  hotspot and making it bigger
+  than other stars on the page*/
+#result_rating {
+  float: right;
+  padding-top: 25px;
+  font-size: 150%;
+}
+
+/*Styling the stars to keep them
+  horizontally aligned with the
+  username*/
+.review_result_rating {
+  float: right;
+  padding-top: 12.5px;
+}
+
+/*Styling the star to make it bigger
+  than the entered ratings and smaller
+  then the overall rating*/
+.enter_rating_star {
+  padding: 15px 0 20px 0;
+  font-size: 125%;
+}
+
+/*Adding padding to either side of each
+  star so that it looks linked together
+  when the ratings are being entered on
+  mouseover and mouseout*/
+.fa-star {
+  padding: 0 3px;
+}
+
+/*The comment of the wifi hotspot entered
+  by the user. The sizing and the margins
+  changed to look better with other text*/
+.review_result_comments {
+  font-size: 70%;
+  margin: -10px auto;
+}
+
+/*The date time is styled with italics and
+  a smaller size to signal its different to
+  the rest of the review*/
+.review_result_date_time {
+  font-size: 45%;
+  font-style: italic;
+  padding-top: 2.5px;
+}
+
+/* MAP ON SEARCH RESULTS PAGE */
+#search_results_map {
+  min-width: 350px;
+  max-width: 60%;
+  height: 350px;
+  padding: 10px;
+  background-color: grey;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* on index.html, content that appears below header */
+.index_post {
+  padding-bottom: 20px;
+  min-height: 400px;
+}
+/*Used on search.html to align the form on the page*/
+#searchfield {
+  min-width: 350px;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#button {
+        background-color: black;
+        color: white;
+        height:  45px;
+        width:  120px;
+        font-size: 1em;
+        border: none;
+        margin-bottom: 20px;
+}
+
+#button:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+}
+
+#button:active {
+        background-color: grey;
+        color: white;
+        border: 1px solid black;
+}

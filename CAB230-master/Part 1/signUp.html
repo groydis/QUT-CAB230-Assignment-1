@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Font Awesome Icons -->
+		<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+		<!-- Style Sheet -->
+		<link href="css/design.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="scripts/signupscript.js"></script>
+		<!-- Webpage Title -->
+		<title>BNE Wi-Fi Reviews - Sign Up</title>
+	</head>
+	<body>
+		<!-- Container for entire page -->
+		<!-- Navigation Bar -->
+		<?php include 'navbar.php'; ?>
+		<div id="body_content">
+			<div class="content">
+				<div class="header">
+					<h1 id="static_title">Sign Up</h1>
+				</div>
+				<form name="login" id="input_table">
+					<!--First Input Box-->
+					<div id = "first_name_div">
+						<label for="first_name"> First Name:</label>
+						<input type="text" id="first_name" placeholder="First Name" onblur="return checkFirstName()" onfocus="undoFirstNameError()">
+						<div class="error_message" id="first_name_error"></div>
+					</div>
+					<!--Last Name Input Box-->
+					<div id = "last_name_div">
+						<label for="last_name"> Last Name:</label>
+						<input type="text" id="last_name" placeholder="Last Name" onblur="return checkLastName()" onfocus="undoLastNameError()">
+						<div class="error_message" id="last_name_error"></div>
+					</div>
+					<!--Username Input Box-->
+					<div id = "user_name">
+						<label for="username" id="user_label">Username:</label>
+						<input type="text" id="username" placeholder="Username" onblur="return checkUsername()" onfocus="undoUsernameError()">
+						<div class="error_message" id="username_error"></div>
+					</div>
+					<!--Email Input Box-->
+					<div id = "email">
+						<label for="email_address">Email:</label>
+						<input type="email" id="email_address" placeholder="johnSmith@mail.com" onblur="checkEmailAddress(); return checkPasswordMatch()" onfocus="undoEmailError()">
+						<div class="error_message" id="email_error"></div>
+					</div>
+					<!--Password Input Box with Confirmation Implemented-->
+					<div id = "enter_password">
+						<!--Password Input Box-->
+						<label for="password">Password:</label>
+						<input type="password" id="password" placeholder="Password" onblur="checkPassword(); return checkPasswordMatch()" onfocus="undoPasswordError()">
+						<!--Error Message for the First Password-->
+						<div class="error_message" id="password_error"></div>
+						<!--Confirm Password Input Box-->
+						<label for="confirm_password">Confirm Password:</label>
+						<input type="password" id="confirm_password" placeholder="Confirm Password" onblur="checkConfirmPassword(); return checkPasswordMatch()" onfocus="undoConfirmPasswordError();">
+						<!--Error Message for Confirming the Password-->
+						<div class="error_message" id="confirm_password_error"></div>
+					</div>
+					<!--Date of Birth Input Box-->
+					<div id = "date_of_birth">
+						<label for="dob">Date of Birth:</label>
+						<input type="date" id="dob" onblur="return checkDOB()" onfocus="undoDOBError()">
+						<div class="error_message" id="DOB_error"></div>
+					</div>
+					<!--Postcode Input Box-->
+					<div id = "post_code">
+						<label for="postcode">Postcode:</label>
+						<input type="text" id="postcode" placeholder="e.g 4000" onblur="return validatePostcode(); return checkPostcode()" onfocus="undoPostcodeError()">
+						<div class="error_message" id="postcode_error"></div>
+					</div>
+					<!--Submit Button for Validation and Entering into the Website as a Signed in User-->
+					<div class="sign_up_and_login_buttons">
+						<!--Submit Button of the Form-->
+						<input type="button" id= "button" name="sign_up" value="Sign Up" onclick="return validateForm()">
+						<p>Already Signed Up?</p>
+						<!--Alex did this-->
+						<!--Button that takes you to the Login Page if you are Already Signed Up-->
+						<input type="button" id= "button" name="go_to_login_page" value="Login"  onclick="window.location.href='login.html'">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="footer">
+			<p>Made By Greyden Scott, Alex Holm & Sean O'Connell</p>
+		</div>
+	</body>
+</html>
